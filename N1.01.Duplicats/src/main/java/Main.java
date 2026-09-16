@@ -18,7 +18,7 @@ public class Main {
         monthList.add(new Month("December"));
 
         for (Month m : monthList) {
-            System.out.println(m);
+            System.out.println(m.toString());
         }
     }
 }
