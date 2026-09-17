@@ -21,3 +21,4 @@ Puedes hacerlo implementando la interfaz Comparableo mediante un Comparator, seg
 - He creado reglas personalizadas en el metodo
 - En el Main he creado mas restaurantes y despues de haber convertido el HashSet a List he llamado un Collections.sort
 - La lista sale ordenada.
+- Para hacer una prueba he cambiado el orden de la lista invertiendo this.name con other.name y this.points con other.points

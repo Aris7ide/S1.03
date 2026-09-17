@@ -12,13 +12,13 @@ public class Restaurant implements Comparable<Restaurant> {
 
     @Override
     public int compareTo(Restaurant other) {
-        int nameComparison = this.name.compareToIgnoreCase(other.name);
+        int nameComparison = other.name.compareToIgnoreCase(this.name);
 
         if (nameComparison != 0) {
             return nameComparison;
         }
 
-        return Integer.compare(other.points, this.points);
+        return Integer.compare(this.points,other.points);
     }
 
     @Override
