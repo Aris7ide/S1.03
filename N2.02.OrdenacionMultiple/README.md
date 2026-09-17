@@ -17,4 +17,7 @@ Puedes hacerlo implementando la interfaz Comparableo mediante un Comparator, seg
 
 ## Excecution
 - he copiado Main y Restaurant del ejercicio previo.
-- 
+- He creado el metodo compareTo con un Overrida implementando Comparable<> en la clase Restaurant
+- He creado reglas personalizadas en el metodo
+- En el Main he creado mas restaurantes y despues de haber convertido el HashSet a List he llamado un Collections.sort
+- La lista sale ordenada.
