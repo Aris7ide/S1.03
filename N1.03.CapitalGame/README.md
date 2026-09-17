@@ -37,4 +37,6 @@ En finalitzar les 10 preguntes, el programa guardarà el nom de l’usuari/ària
 - El randomQuestion() transforma los keys del Map en un List con un index, con un numero random elije uno de estos valores y pregunta al usuario si conoce la capital de ese Estado. 
 - La respuesta del usuario se compara en un equalIgnoreCase() al value de ese key una vez encontrada en el map. 
 - Un System.out.println saca la puntuaciòn final.
-- 
+- He creado el metodo saveScore() que escribe nombre y puntuacion en un .txt
+- Al principio creia que no estaba guardando nada porque puse classificacio.txt en resources
+- Luego me he dado cuenta de que classificacio.txt està en la carpeta src y que està guardando todo correctaemtne.

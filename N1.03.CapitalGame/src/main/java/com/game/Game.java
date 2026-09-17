@@ -14,6 +14,7 @@ public class Game {
         for (int i = 0; i < 10; i++) {
             if (randomQuestion(listCountries,totalScore)) {
                 totalScore++;
+                System.out.println("BINGO");
             }
         }
         return totalScore;
@@ -29,7 +30,7 @@ public class Game {
         String randomKey = keys.get(randomIndex);
 
         String answer = ConsoleReader.readStringName("Cual es la capital de " + randomKey);
-        if (answer.equalsIgnoreCase((String) listCountries.get(randomKey))) {
+        if (answer.equals(listCountries.get(randomKey))) {
             value = true;
         }
 

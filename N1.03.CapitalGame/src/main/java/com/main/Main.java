@@ -10,20 +10,20 @@ import java.util.Map;
 public class Main {
     static void main(String[] args) {
 
-        Map<String,String> listCountries = new HashMap<>(MapFileUtils.readTxt("countries.txt"));
+        Map<String, String> listCountries = new HashMap<>(MapFileUtils.readTxt("countries.txt"));
 
         String name = ConsoleReader.readStringName("Escribe el nombre del jugador");
         boolean sn = ConsoleReader.readChar("Hello " + name + ", quieres empezar el juego? s/n");
 
+        int finalScore = 0;
         if (sn) {
-            int finale = Game.startGame(listCountries);
-            System.out.println(name + " has conseguido " + finale + " punto/s.");
+            finalScore = Game.startGame(listCountries);
+            System.out.println(name + " has conseguido " + finalScore + " punto/s.");
         }
 
-        //PUNTOS FINALES
+        MapFileUtils.saveScore("classificacio.txt", name, finalScore);
+
         //Asegurarme de que se hayan guardado en classificacio.txt
-
-
 
 
     }

@@ -1,9 +1,6 @@
 package com.utils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,5 +33,19 @@ public class MapFileUtils {
         }
 
         return map;
+    }
+
+    public static void saveScore(String fileName, String name, int totalScore) {
+        try (FileWriter fw = new FileWriter(fileName, true);
+        BufferedWriter bw = new BufferedWriter(fw)) {
+
+            bw.write(name + " " + totalScore);
+            bw.newLine();
+
+            System.out.println("El jugador y la puntuaciòn ha sido guardada");
+
+        } catch (IOException e) {
+            System.err.println("Ha habido un error: " + e.getMessage());
+        }
     }
 }
