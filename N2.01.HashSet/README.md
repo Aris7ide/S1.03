@@ -16,3 +16,8 @@ Puede haber restaurantes con el mismo nombre si la puntuación es diferente, per
 - **IDE**: IntelliJ IDEA
 
 ## Excecution
+- he creado las clases Restaurant y Main
+- He creado en Restauran los metodos equal(), hashCode() y toString haciendo un Override.
+- Desde el Main he creado un HashSet llamado listRest y he añadido dos restaurantes.
+- Los he llamados con un for (Restaurant r : listRest) y han salido correctamente llamando el .toString();
+- Intentando añadir elementos iguales con misma puntuacion y mismo nombre no deja.
