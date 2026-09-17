@@ -30,4 +30,11 @@ En finalitzar les 10 preguntes, el programa guardarà el nom de l’usuari/ària
 - #### el error estaba en .line.split(), habia puesto \d en vez de \s
 - He creado una clase ConsoleReader que pueda manejar el Scanner y las excepciones.
 - Tambièn he creado una excepcion personalizada NameInputError.
+- He añadido readChar en ConsoleReader para pedir a utente si quiere empezar el juego.
+- Si la respuesta es "s" devolverà un true y empezarà el startGame().
+- He creado toda la logica del juego en Game, con dos metodos.
+- El primer metodo startGame() lanza un if con 10 intentos, cada vez llamando otro metodo randomQuestion().
+- El randomQuestion() transforma los keys del Map en un List con un index, con un numero random elije uno de estos valores y pregunta al usuario si conoce la capital de ese Estado. 
+- La respuesta del usuario se compara en un equalIgnoreCase() al value de ese key una vez encontrada en el map. 
+- Un System.out.println saca la puntuaciòn final.
 - 
