@@ -28,4 +28,6 @@ En finalitzar les 10 preguntes, el programa guardarà el nom de l’usuari/ària
 - teoricamente desde el main, llamando el metodo y especificando el nombre de un file en resources ahora se crea un HashMap con todos los valores del .txt
 - He llamado el metodo del main, ya que no me devuelve elementos he usado un if-else para verificar que listCountries no estè vacia, efectivamente està vacia.
 - #### el error estaba en .line.split(), habia puesto \d en vez de \s
+- He creado una clase ConsoleReader que pueda manejar el Scanner y las excepciones.
+- Tambièn he creado una excepcion personalizada NameInputError.
 - 

@@ -1,5 +1,6 @@
 package com.main;
 
+import com.console.ConsoleReader;
 import com.utils.MapFileUtils;
 
 import java.util.HashMap;
@@ -10,18 +11,8 @@ public class Main {
 
         Map<String,String> listCountries = new HashMap<>(MapFileUtils.readTxt("countries.txt"));
 
-        if (!listCountries.isEmpty()) {
-
-            for (Map.Entry<String, String> d : listCountries.entrySet()) {
-                String key = d.getKey();
-                String value = d.getValue();
-
-                System.out.println("Pais: " + key + ", ciudad: " + value);
-            }
-        } else {
-
-            System.err.println("La lista està vacia.");
-        }
+        String name = ConsoleReader.readStringName("Escribe el nombre del jugador");
+        System.out.println("Hello " + name);
 
     }
 }
