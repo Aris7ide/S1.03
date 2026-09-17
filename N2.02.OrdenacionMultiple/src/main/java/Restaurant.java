@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Restaurant {
+public class Restaurant implements Comparable<Restaurant> {
 
     String name;
     int points;
@@ -10,7 +10,16 @@ public class Restaurant {
         this.points = points;
     }
 
-    //OVERRIDE equals() y hashCode()
+    @Override
+    public int compareTo(Restaurant other) {
+        int nameComparison = this.name.compareToIgnoreCase(other.name);
+
+        if (nameComparison != 0) {
+            return nameComparison;
+        }
+
+        return Integer.compare(other.points, this.points);
+    }
 
     @Override
     public boolean equals(Object obj) {
