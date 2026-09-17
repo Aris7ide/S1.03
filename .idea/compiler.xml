@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="N1.01.Duplicats" />
         <module name="N1.02.LilstIterator" />
+        <module name="N1.01.Duplicats" />
         <module name="N1.03.CapitalGame" />
+        <module name="N2.01.HashSet" />
       </profile>
     </annotationProcessing>
   </component>
