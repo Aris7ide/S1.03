@@ -13,3 +13,5 @@
 - **IDE**: IntelliJ IDEA
 
 ## Excecution
+- He creado un List<Integer> list1 en el main y les he puesto 5 numeros, los he llamados con Integer para verificar que estèn bien. 
+- 
