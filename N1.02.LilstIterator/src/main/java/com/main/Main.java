@@ -16,17 +16,17 @@ public class Main {
         list1.add(5);
 
         Iterator<Integer> iterator = list1.iterator();
-        while (iterator.hasNext()){
+
+        List<Integer> list2 = new ArrayList<>();
+
+        while (iterator.hasNext()) {
             Integer i = iterator.next();
-            System.out.println(i);
+            list2.add(i);
         }
 
-        List<Integer> list2 = new ArrayList<>(list1);
         Collections.reverse(list2);
 
-        Iterator<Integer> iterator2 = list2.iterator();
-        while (iterator2.hasNext()){
-            Integer i = iterator2.next();
+        for (Integer i : list2) {
             System.out.println(i);
         }
 

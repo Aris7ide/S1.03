@@ -15,3 +15,4 @@
 ## Excecution
 - He creado un List<Integer> list1 en el main y les he puesto 5 numeros, los he llamados con Integer para verificar que estèn bien. 
 - He copiado la list1 en list2 y usado el Colletion.reverse(list1) para ponerla al revers. He tenido que importar java.util.Collections.
+- El ejercicio pide usar el Iterator para meter los numeros de list1 a list2, asi he cancelado y he usado el Iterator para hacerlo.
