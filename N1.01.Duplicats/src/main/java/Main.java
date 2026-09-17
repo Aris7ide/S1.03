@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,5 +19,29 @@ public class Main {
         for (Month m : monthList) {
             System.out.println(m.toString());
         }
+        System.out.println("\n");
+
+        monthList.add(7,new Month("August"));
+
+        for (Month m : monthList) {
+            System.out.println(m.toString());
+        }
+        System.out.println("\n");
+
+        Set<Month> monthListHash = new HashSet<>(monthList);
+        monthList.add(8,new Month("August"));
+
+        for (Month m : monthListHash) {
+            System.out.println(m.toString());
+        }
+        System.out.println("\n");
+
+        Iterator<Month> iterator = monthListHash.iterator();
+
+        while (iterator.hasNext()) {
+            Month month = iterator.next();
+            System.out.println(month.toString());
+        }
+
     }
 }
