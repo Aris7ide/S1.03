@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="N1.01.Duplicats" />
+        <module name="N1.02.LilstIterator" />
       </profile>
     </annotationProcessing>
   </component>
