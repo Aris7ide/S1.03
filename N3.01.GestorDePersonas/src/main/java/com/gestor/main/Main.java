@@ -7,7 +7,7 @@ public class Main {
     static void main(String[] args) {
 
         Service service = new Service();
-        ConsoleUI ui = new ConsoleUI();
+        ConsoleUI ui = new ConsoleUI(service);
 
         ConsoleUI.start();
 

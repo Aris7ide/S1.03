@@ -5,6 +5,7 @@ import com.gestor.ui.ConsoleReader;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Service {
@@ -49,7 +50,7 @@ public class Service {
                         String surname = parts[1].trim();
                         String dni = parts[2].trim();
 
-                        Person person = new Person(name,surname,dni);
+                        Person person = new Person(dni,surname,name);
                         listPeople.add(person);
                     }
                 }
@@ -81,7 +82,12 @@ public class Service {
         String surname = ConsoleReader.readString("Cual es el apellido?");
         String dni = ConsoleReader.readString("Dni?");
 
-        listPeople.add(new Person(name,surname,dni));
-        Service.saveToCSV(new Person(name,surname,dni));
+        listPeople.add(new Person(dni,surname,name));
+        Service.saveToCSV(new Person(dni,surname,name));
+    }
+
+    public static void showByNameAZ() {
+        listPeople.sort(Comparator.comparing(Person::getName));
+        listPeople.forEach(p -> System.out.println(p));
     }
 }

@@ -38,3 +38,4 @@ Crea una aplicación capaz de leer un archivo CSV. Este archivo tiene 3 campos: 
 - he llamado ConsoleUI.start() desde el Main, creado el método en ConsoleUI con el menu y el método .readString() en ConsoleReader llamando una exception.
 - He creado el metodo saveFromCSV() in Service para guardar todos los datos en el CSV en un Arraylist<Person> people.
 - He creado el primer metodo addPerson() in Service que guarda el new Person ne el Array y tambièn la añade al CSV.
+- He creado el primer metodo para organizar los datos showByNameAZ using .sort(Comparator.comapring())

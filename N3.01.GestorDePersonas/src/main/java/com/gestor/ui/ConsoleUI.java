@@ -4,7 +4,7 @@ import com.gestor.service.Service;
 
 public class ConsoleUI {
 
-    public ConsoleUI() {
+    public ConsoleUI(Service service) {
 
     }
 
@@ -25,7 +25,9 @@ public class ConsoleUI {
                 case 1:
                     Service.addPerson();
                 case 2:
+                    Service.showByNameAZ();
                 case 3:
+                    //Service.showByNameZA();
                 case 4:
                 case 5:
                 case 6:
