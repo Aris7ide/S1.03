@@ -24,14 +24,25 @@ public class ConsoleUI {
             switch (option) {
                 case 1:
                     Service.addPerson();
+                    break;
                 case 2:
                     Service.showByNameAZ();
+                    break;
                 case 3:
-                    //Service.showByNameZA();
+                    Service.showByNameZA();
+                    break;
                 case 4:
+                    Service.showBySurnameAZ();
+                    break;
                 case 5:
+                    Service.showBySurnameZA();
+                    break;
                 case 6:
+                    Service.showByDniAZ();
+                    break;
                 case 7:
+                    Service.showByDniZA();
+                    break;
                 case 0:
                     option = 0;
                     break;

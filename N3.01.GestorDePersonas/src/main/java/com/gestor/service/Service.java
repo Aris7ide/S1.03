@@ -11,23 +11,18 @@ import java.util.List;
 public class Service {
 
     private static List<Person> listPeople;
-    private final String nameFileCSV;
+    private static String nameFileCSV;
 
     public Service() {
         this.listPeople = new ArrayList<>();
-        this.nameFileCSV = "people.csv";
+        this.nameFileCSV = "N3.01.GestorDePersonas/people.csv";
 
         saveFromCSV();
     }
 
     private void saveFromCSV() {
 
-        try (InputStream is = getClass().getClassLoader().getResourceAsStream(nameFileCSV)) {
-            if (is == null) {
-                throw new IOException("El archivo " + nameFileCSV + " no existe");
-            }
-
-            try (BufferedReader br = new BufferedReader(new InputStreamReader(is))){
+            try (BufferedReader br = new BufferedReader(new FileReader(nameFileCSV))){
                 String line;
                 boolean isHeader = true;
 
@@ -54,17 +49,15 @@ public class Service {
                         listPeople.add(person);
                     }
                 }
+            } catch (IOException e) {
+                System.err.println("Error: " + e.getMessage());
             }
-        } catch (IOException e) {
-            System.err.println("Error en cargar el CSV: " + e.getMessage());
-        }
 
     }
 
     public static void saveToCSV(Person person) {
-        String filePath = "src/main/resources/people.csv";
 
-        try (FileWriter fw = new FileWriter(filePath, true);
+        try (FileWriter fw = new FileWriter(nameFileCSV, true);
         BufferedWriter br = new BufferedWriter(fw)){
             String line = person.getName() + "," + person.getSurname() + "," + person.getDni();
             br.write(line);
@@ -88,6 +81,31 @@ public class Service {
 
     public static void showByNameAZ() {
         listPeople.sort(Comparator.comparing(Person::getName));
+        listPeople.forEach(p -> System.out.println(p));
+    }
+
+    public static void showByNameZA() {
+        listPeople.sort(Comparator.comparing(Person::getName).reversed());
+        listPeople.forEach(p -> System.out.println(p));
+    }
+
+    public static void showBySurnameAZ() {
+        listPeople.sort(Comparator.comparing(Person::getSurname));
+        listPeople.forEach(p -> System.out.println(p));
+    }
+
+    public static void showBySurnameZA() {
+        listPeople.sort(Comparator.comparing(Person::getSurname).reversed());
+        listPeople.forEach(p -> System.out.println(p));
+    }
+
+    public static void showByDniAZ() {
+        listPeople.sort(Comparator.comparing(Person::getDni));
+        listPeople.forEach(p -> System.out.println(p));
+    }
+
+    public static void showByDniZA() {
+        listPeople.sort(Comparator.comparing(Person::getDni).reversed());
         listPeople.forEach(p -> System.out.println(p));
     }
 }
