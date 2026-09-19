@@ -80,31 +80,37 @@ public class Service {
     }
 
     public static void showByNameAZ() {
+        System.out.println("____NAME_______SURNAME_______DNI_____");
         listPeople.sort(Comparator.comparing(Person::getName));
         listPeople.forEach(p -> System.out.println(p));
     }
 
     public static void showByNameZA() {
+        System.out.println("____NAME_______SURNAME_______DNI_____");
         listPeople.sort(Comparator.comparing(Person::getName).reversed());
         listPeople.forEach(p -> System.out.println(p));
     }
 
     public static void showBySurnameAZ() {
+        System.out.println("____NAME_______SURNAME_______DNI_____");
         listPeople.sort(Comparator.comparing(Person::getSurname));
         listPeople.forEach(p -> System.out.println(p));
     }
 
     public static void showBySurnameZA() {
+        System.out.println("____NAME_______SURNAME_______DNI_____");
         listPeople.sort(Comparator.comparing(Person::getSurname).reversed());
         listPeople.forEach(p -> System.out.println(p));
     }
 
     public static void showByDniAZ() {
+        System.out.println("____NAME_______SURNAME_______DNI_____");
         listPeople.sort(Comparator.comparing(Person::getDni));
         listPeople.forEach(p -> System.out.println(p));
     }
 
     public static void showByDniZA() {
+        System.out.println("____NAME_______SURNAME_______DNI_____");
         listPeople.sort(Comparator.comparing(Person::getDni).reversed());
         listPeople.forEach(p -> System.out.println(p));
     }
