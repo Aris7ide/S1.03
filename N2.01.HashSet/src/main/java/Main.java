@@ -13,6 +13,8 @@ public class Main {
             System.out.println(r.toString());
         }
 
+        System.out.println();
+
         listRest.add(new Restaurant("Sorbillo", 1));
         listRest.add(new Restaurant("Sorbillo",5));
         listRest.add(new Restaurant("Sorbillo", 1));

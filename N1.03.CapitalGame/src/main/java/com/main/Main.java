@@ -22,9 +22,5 @@ public class Main {
         }
 
         MapFileUtils.saveScore("classificacio.txt", name, finalScore);
-
-        //Asegurarme de que se hayan guardado en classificacio.txt
-
-
     }
 }

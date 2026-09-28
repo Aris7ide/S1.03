@@ -13,7 +13,6 @@ public class Main {
         listRest.add(new Restaurant("Rosita", 8));
         listRest.add(new Restaurant("Rosita", 2));
         listRest.add(new Restaurant("Nanni",5));
-        listRest.add(new Restaurant("Tua madre", 6));
 
         List<Restaurant> listRestOrdered = new ArrayList<>(listRest);
 

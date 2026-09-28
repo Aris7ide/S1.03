@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Game {
 
-    public static int startGame(Map listCountries) {
+    public static int startGame(Map<String,String> listCountries) {
 
         int totalScore = 0;
         boolean value = false;
@@ -20,7 +20,7 @@ public class Game {
         return totalScore;
     }
 
-    public static boolean randomQuestion(Map listCountries, int totalScore) {
+    public static boolean randomQuestion(Map<String,String> listCountries, int totalScore) {
         // Saca un elemento random del Map listCountries y un System print
         List<String> keys = new ArrayList<>(listCountries.keySet());
         boolean value = false;

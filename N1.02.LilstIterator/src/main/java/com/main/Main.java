@@ -20,8 +20,7 @@ public class Main {
         List<Integer> list2 = new ArrayList<>();
 
         while (iterator.hasNext()) {
-            Integer i = iterator.next();
-            list2.add(i);
+            list2.add(iterator.next());
         }
 
         Collections.reverse(list2);

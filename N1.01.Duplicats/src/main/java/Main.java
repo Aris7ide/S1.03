@@ -5,7 +5,7 @@ public class Main {
         List<Month> monthList = new ArrayList<>();
 
         monthList.add(new Month("January"));
-        monthList.add(new Month("Febrauary"));
+        monthList.add(new Month("February"));
         monthList.add(new Month("March"));
         monthList.add(new Month("April"));
         monthList.add(new Month("May"));
@@ -34,7 +34,7 @@ public class Main {
         for (Month m : monthListHash) {
             System.out.println(m.toString());
         }
-        System.out.println("\n");
+        System.out.println();
 
         Iterator<Month> iterator = monthListHash.iterator();
 
